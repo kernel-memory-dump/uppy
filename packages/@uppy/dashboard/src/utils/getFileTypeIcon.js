@@ -39,10 +39,19 @@ module.exports = function getIconByMime (fileType) {
     }
   }
 
+  if (fileTypeGeneral === 'application' && fileTypeSpecific === 'msword') {
+    return {
+      color: '#e25149',
+      icon: iconWORD()
+    }
+  }
+
+
   if (fileTypeGeneral === 'image') {
+    window.dokazDaJeOvdeBiloONesto = true;
     return {
       color: '#f2f2f2',
-      icon: ''
+      icon: iconPDF()
     }
   }
 
